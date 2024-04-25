@@ -1,0 +1,328 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="40dp"
+        android:gravity="center">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginStart="35dp"
+            android:layout_marginEnd="35dp">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Hello,"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/cardView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                app:cardCornerRadius="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/profile"
+                    android:scaleType="centerCrop" />
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="PJ Caleon"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/cardView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="350dp"
+                    android:layout_height="220dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/cash_bg"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/amaranth_bold"
+                        android:text="CASH"
+                        android:textColor="@color/white"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/cashBAL"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="6dp"
+                        android:fontFamily="@font/amaranth_bold"
+                        android:text="P1000"
+                        android:textColor="@color/white"
+                        android:textSize="48sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginEnd="10dp"
+                            android:src="@drawable/up" />
+
+                        <TextView
+                            android:id="@+id/cashIN"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="20dp"
+                            android:text="P1000"
+                            android:textColor="@color/white" />
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginStart="40dp"
+                            android:layout_marginEnd="10dp"
+                            android:src="@drawable/down" />
+
+                        <TextView
+                            android:id="@+id/cashOUT"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="20dp"
+                            android:text="P1000"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="350dp"
+                    android:layout_height="220dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/gcash_bg"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/amaranth_bold"
+                        android:text="GCASH"
+                        android:textColor="@color/white"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/gcashBAL"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="6dp"
+                        android:fontFamily="@font/amaranth_bold"
+                        android:text="P1000"
+                        android:textColor="@color/white"
+                        android:textSize="48sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginEnd="10dp"
+                            android:src="@drawable/up" />
+
+                        <TextView
+                            android:id="@+id/gcashIN"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="20dp"
+                            android:text="P1000"
+                            android:textColor="@color/white" />
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginStart="40dp"
+                            android:layout_marginEnd="10dp"
+                            android:src="@drawable/down" />
+
+                        <TextView
+                            android:id="@+id/gcashOUT"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="20dp"
+                            android:text="P1000"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="350dp"
+                    android:layout_height="220dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/beep_bg"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/amaranth_bold"
+                        android:text="BEEP"
+                        android:textColor="@color/white"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/beepBAL"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="6dp"
+                        android:fontFamily="@font/amaranth_bold"
+                        android:text="P1000"
+                        android:textColor="@color/white"
+                        android:textSize="48sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginEnd="10dp"
+                            android:src="@drawable/up" />
+
+                        <TextView
+                            android:id="@+id/beepIN"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="20dp"
+                            android:text="P1000"
+                            android:textColor="@color/white" />
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginStart="40dp"
+                            android:layout_marginEnd="10dp"
+                            android:src="@drawable/down" />
+
+                        <TextView
+                            android:id="@+id/beepOUT"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="20dp"
+                            android:text="P1000"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!-- Repeat the above LinearLayouts for GCASH and BEEP cards -->
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/cashBTN"
+                android:layout_width="350dp"
+                android:layout_height="120dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/cash_bg"
+                android:foreground="?attr/selectableItemBackground"
+                android:text="💰 CASH"
+                android:textColor="@color/white"
+                android:textSize="34sp"
+                app:backgroundTint="@color/button" />
+
+            <Button
+                android:id="@+id/gcashBTN"
+                android:layout_width="350dp"
+                android:layout_height="120dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/gcash_bg"
+                android:foreground="?attr/selectableItemBackground"
+                android:text="💳 GCASH"
+                android:textColor="@color/white"
+                android:textSize="34sp"
+                app:backgroundTint="@color/button" />
+
+            <Button
+                android:id="@+id/beepBTN"
+                android:layout_width="350dp"
+                android:layout_height="120dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/beep_bg"
+                android:foreground="?attr/selectableItemBackground"
+                android:text="🚈 BEEP"
+                android:textColor="@color/white"
+                android:textSize="34sp"
+                app:backgroundTint="@color/button" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>
